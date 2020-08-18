@@ -21,7 +21,7 @@ describe('Travels application', () => {
 
     it('click on flights tab', () => {
        
-        browser.pause(10000);
+        browser.pause(40000);
         HomePage.clicOnFlightTab();
         browser.pause(10000);
       //  HomePage.insertFromCountry();
