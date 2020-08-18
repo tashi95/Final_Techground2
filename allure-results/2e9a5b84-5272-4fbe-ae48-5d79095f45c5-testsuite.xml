@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597704929578' stop='1597704930531'>
+    <name>Travels application</name>
+    <title>Travels application</title>
+    <test-cases>
+        <test-case start='1597704929578' status='passed' stop='1597704930176'>
+            <name>"before all" hook for "click on flights tab"</name>
+            <title>"before all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597704929581' status='passed' stop='1597704930176'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='088d2923-38f1-478b-ae6a-2bf21954fbbb-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1597704930177' status='undefined'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1597704930177' status='broken' stop='1597704930530'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597704930179' status='passed' stop='1597704930206'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='f7d5cb83-5817-4fb9-b773-2d42e4724a95-attachment.json' type='application/json' size='74'/>
+                        <attachment title='Response' source='c65dfa1b-c268-4d5e-ad89-16031d96a4a4-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597704930216' status='passed' stop='1597704930529'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='967514da-6abf-4ada-b7c4-00fe2d5f4e53-attachment.png' type='image/png' size='4984'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>HomePage.getflightsTab(...).click is not a function</message>
+                <stack-trace>TypeError: HomePage.getflightsTab(...).click is not a function
+                    at Context.&lt;anonymous> (C:\Users\joseth.castro\Documents\Final_Techground2\test\specs\home.e2e.js:25:34)
+                    at Context.executeSync (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597704930530' status='passed' stop='1597704930531'>
+            <name>"after all" hook for "click on flights tab"</name>
+            <title>"after all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

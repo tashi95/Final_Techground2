@@ -1,0 +1,129 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597703506063' stop='1597703536187'>
+    <name>Travels application</name>
+    <title>Travels application</title>
+    <test-cases>
+        <test-case start='1597703506064' status='passed' stop='1597703507553'>
+            <name>"before all" hook for "click on flights tab"</name>
+            <title>"before all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597703506067' status='passed' stop='1597703507553'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='14409f34-39aa-4f0d-bd51-570b00544db2-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1597703507554' status='undefined'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1597703507554' status='broken' stop='1597703536185'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597703507556' status='passed' stop='1597703507591'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e771b735-f017-463d-9e1f-ed7610a598bd-attachment.json' type='application/json' size='65'/>
+                        <attachment title='Response' source='97c720d1-d536-40a6-b1d9-90093304aaf8-attachment.json' type='application/json' size='1063'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597703507602' status='passed' stop='1597703507651'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='f1866a95-2f0b-4ee5-9e47-ea1f91f67458-attachment.json' type='application/json' size='65'/>
+                        <attachment title='Response' source='94950813-5d6c-412f-8a71-47601841aeb8-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597703508102' status='passed' stop='1597703508112'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='12ad20da-20fd-4433-b512-e5a514a4cdf6-attachment.json' type='application/json' size='65'/>
+                        <attachment title='Response' source='f5c153b0-39f4-4f46-932a-6a701b5b5b01-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597703508603' status='passed' stop='1597703536184'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='d980af9e-678f-495f-b1fc-c438aeddbd01-attachment.json' type='application/json' size='65'/>
+                        <attachment title='Screenshot' source='69b8e73e-8005-4053-9b6d-e070752afcfe-attachment.png' type='image/png' size='489315'/>
+                    </attachments>
+                    <steps>
+                        <step start='1597703517604' status='passed' stop='1597703535767'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Response' source='241b1dee-6391-43ae-80bd-7c3cad32c91d-attachment.json' type='application/json' size='11832'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Can't call click on element with selector "//a["text-center flights"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "//a["text-center flights"]" because element wasn't found
+                    at implicitWait (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\webdriverio\build\utils\implicitWait.js:22:13)
+                    at Element.runCommandWithHooks (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\wrapCommand.js:82:22)
+                    at Element.wrapCommandFn (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\wrapCommand.js:59:40)
+                    at Element.elementErrorHandlerCallback (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\webdriverio\build\middlewares.js:40:8)
+                    at Context.&lt;anonymous> (C:\Users\joseth.castro\Documents\Final_Techground2\test\specs\home.e2e.js:24:34)
+                    at Context.executeSync (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597703536186' status='passed' stop='1597703536186'>
+            <name>"after all" hook for "click on flights tab"</name>
+            <title>"after all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

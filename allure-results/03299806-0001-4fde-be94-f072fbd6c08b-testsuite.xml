@@ -1,0 +1,111 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597703454531' stop='1597703455455'>
+    <name>Travels application</name>
+    <title>Travels application</title>
+    <test-cases>
+        <test-case start='1597703454531' status='passed' stop='1597703455057'>
+            <name>"before all" hook for "click on flights tab"</name>
+            <title>"before all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597703454535' status='passed' stop='1597703455056'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='cecdae9e-666e-4b16-9c56-cc2df2980d55-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1597703455057' status='undefined'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1597703455058' status='broken' stop='1597703455454'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597703455060' status='broken' stop='1597703455454'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='1584e892-db89-46f8-8434-e30abbcf5458-attachment.json' type='application/json' size='61'/>
+                    </attachments>
+                    <steps>
+                        <step start='1597703455122' status='passed' stop='1597703455453'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='90760477-a7d4-4355-8600-959a53138b14-attachment.png' type='image/png' size='4926'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>invalid selector: Unable to locate an element with the xpath expression //a[text-center flights] because of the following error:
+                SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[text-center flights]' is not a valid XPath expression.
+                  (Session info: chrome=84.0.4147.125)</message>
+                <stack-trace>invalid selector: Unable to locate an element with the xpath expression //a[text-center flights] because of the following error:
+                SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[text-center flights]' is not a valid XPath expression.
+                  (Session info: chrome=84.0.4147.125)
+                    at getErrorFromResponseBody (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\webdriver\build\utils.js:121:10)
+                    at WebDriverRequest._request (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\webdriver\build\request.js:149:56)
+                    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+                    at async Browser.$ (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\webdriverio\build\commands\browser\$.js:19:15)
+                    at async Browser.runCommandWithHooks (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\wrapCommand.js:88:21)
+                    at Browser.runCommandWithHooks (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\wrapCommand.js:82:22)
+                    at Browser.wrapCommandFn (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\wrapCommand.js:59:40)
+                    at global.$ (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\runner\build\index.js:189:36)
+                    at Home.get flightsTab [as flightsTab] (C:\Users\joseth.castro\Documents\Final_Techground2\test\pageobjects\Home.page.js:4:30)
+                    at Home.getflightsTab (C:\Users\joseth.castro\Documents\Final_Techground2\test\pageobjects\Home.page.js:17:21)
+                    at Context.&lt;anonymous> (C:\Users\joseth.castro\Documents\Final_Techground2\test\specs\home.e2e.js:24:18)
+                    at Context.executeSync (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:56:18)
+                    at C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\@wdio\sync\build\index.js:82:70</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597703455454' status='passed' stop='1597703455455'>
+            <name>"after all" hook for "click on flights tab"</name>
+            <title>"after all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,149 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1597714530805' stop='1597714631409'>
+    <name>Travels application</name>
+    <title>Travels application</title>
+    <test-cases>
+        <test-case start='1597714530805' status='passed' stop='1597714531370'>
+            <name>"before all" hook for "click on flights tab"</name>
+            <title>"before all" hook for "click on flights tab"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597714530808' status='passed' stop='1597714531369'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='1687fb6b-0f64-4503-b603-67f105ebde8a-attachment.json' type='application/json' size='42'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1597714531370' status='undefined'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1597714531371' status='broken' stop='1597714591379'>
+            <name>click on flights tab</name>
+            <title>click on flights tab</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597714571377' status='passed' stop='1597714571409'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='b134f263-5d9e-47c7-a01b-d0be02dcee85-attachment.json' type='application/json' size='74'/>
+                        <attachment title='Response' source='d4bba286-6e92-43c7-b5b4-1093ee3713ed-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597714571415' status='passed' stop='1597714571492'>
+                    <name>POST /session/:sessionId/element/5b1ca32c-bfa3-4bc7-a332-d8b642552e4a/click</name>
+                    <title>POST /session/:sessionId/element/5b1ca32c-bfa3-4bc7-a332-d8b642552e4a/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Timeout of 60000ms exceeded. The execution in the test "Travels application click on flights tab" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts.html). (C:\Users\joseth.castro\Documents\Final_Techground2\test\specs\home.e2e.js)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. The execution in the test "Travels application click on flights tab" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts.html). (C:\Users\joseth.castro\Documents\Final_Techground2\test\specs\home.e2e.js)
+                    at Test.Runnable._timeoutError (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\mocha\lib\runnable.js:426:10)
+                    at Timeout.&lt;anonymous> (C:\Users\joseth.castro\Documents\Final_Techground2\node_modules\mocha\lib\runnable.js:238:24)
+                    at listOnTimeout (internal/timers.js:549:17)
+                    at processTimers (internal/timers.js:492:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1597714591380' status='undefined'>
+            <name>insert country from</name>
+            <title>insert country from</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1597714591381' status='passed' stop='1597714631406'>
+            <name>"before each" hook for "insert country from"</name>
+            <title>"before each" hook for "insert country from"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1597714611495' status='passed' stop='1597714611547'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='be83589b-7302-4f9b-bf36-2d3c77d1f86e-attachment.json' type='application/json' size='63'/>
+                        <attachment title='Response' source='d05a32d0-cae4-4664-8d3f-7c2c84607182-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1597714611553' status='undefined'>
+                    <name>POST /session/:sessionId/element/3617cd54-ac3a-4d0d-abb0-d0fe714d814c/clear</name>
+                    <title>POST /session/:sessionId/element/3617cd54-ac3a-4d0d-abb0-d0fe714d814c/clear</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1597714611629' status='passed' stop='1597714612114'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='eb657a98-0604-4add-a25e-977de77ccbc7-attachment.png' type='image/png' size='559767'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1597714631406' status='passed' stop='1597714631408'>
+            <name>"after all" hook for "insert country from"</name>
+            <title>"after all" hook for "insert country from"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
