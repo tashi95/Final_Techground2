@@ -6,10 +6,10 @@ describe('Travels application', () => {
 
     before(()=>
     {
-       browser.url('https://www.phptravels.net/')
+       browser.url('https://www.kiwi.com/')
         console.log('antes de todos los test')
     })
-    beforeEach(()=>
+ /*   beforeEach(()=>
     {
         console.log('antes de cada test')
     })
@@ -17,18 +17,31 @@ describe('Travels application', () => {
 
         console.log('despues de todos los test')
     })
+*/
 
-
-    it('click on flights tab', () => {
+    it('click on travel tab', () => {
        
-        browser.pause(40000);
-        HomePage.clicOnFlightTab();
-        browser.pause(10000);
-      //  HomePage.insertFromCountry();
+        browser.setTimeout({ 'pageLoad': 40000 })
+        HomePage.clicOnTravelTab();
+      
+      });
+
+      it('insert origin', () => {
+    
+        HomePage.cleanOrigin();
+        browser.pause(5000);
+        HomePage.insertOrigin('TXL');
+        browser.pause(30000);
 
       });
-       
-       
+    /* it('insert destination', () => {
+    
+        browser.pause(10000);
+        HomePage.insertDestination();
+        browser.pause(30000);
+
+      });
+*/
    
     });   
 

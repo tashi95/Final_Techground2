@@ -1,32 +1,51 @@
 
 class Home{
 
-    get flightsTab() {return $('a=Flights')}
-    get fromInput() {return $('input[type="text"')}
-  
+    get TravelTab() {return $('span=Viaje')}
+    get OriginInput(){return $('//input[@data-test="SearchField-input"]')}
+    get OriginCheck(){return $('input[type=checkbox]')}
+    get firstCountryOrigin(){return $('//div[@class="Stack__StyledStack-sc-1t576ow-0 gDgpcl"]')}
+    
+    get DestinationInput(){return $('div[data-Test=PlacePickerInput-destination]').$('input[data-Test="SearchField-input]')}
 
-
-  /*  get noArticleslabel(){ return $('div=No articles are here... yet.')}
-    get yourFeedTap(){return $('.nav-link=Your Feed')}
-    get globalFeedTap(){return $('.nav-link=Global Feed')}
-    get articlesRows(){return $('<article-list />').$$('<article-preview />')}
-    get articlesRowsReadMore(){return $('<article-list />').$$('<article-preview />')[1].$('span=Read more...')}
-*/
-    getflightsTab()
+  //Getters
+    getTravelTab() {return this.TravelTab; }
+    getOriginInput(){return this.OriginInput;}
+    getDestinationInput(){return this.DestinationInput;}
+    getOriginCheck(){return this.OriginCheck;}
+    getfirstCountryOrigin(){return this.firstCountryOrigin;}
+    
+  // functions
+    clicOnTravelTab()
     {
-        return this.flightsTab;   
+        this.TravelTab.click(); 
     }
 
-    clicOnFlightTab()
+
+    cleanOrigin()
     {
-        this.flightsTab.click(); 
+        this.OriginInput.click();
+        this.clicOncheckbox();
+    }
+    insertOrigin(Country)
+    {
+   
+        this.OriginInput.setValue(Country);
+        browser.pause(1000);
+        this.firstCountryOrigin.click();
+      
+    }
+    insertDestination(Country)
+    {
+        this.DestinationInput.setValue(Country);
+
+    }
+    clicOncheckbox()
+    {
+        this.OriginCheck.click();
     }
 
-    insertFromCountry()
-    {
-        this.fromInput.setValue('SJO');
-    }
-}
-
+}   
+    
     module.exports = new Home();
     
