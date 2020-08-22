@@ -6,7 +6,7 @@ describe('Travels application', () => {
 
     before(()=>
     {
-       browser.url('https://www.kiwi.com/')
+       browser.url('https://www.kiwi.com/es/')
         console.log('antes de todos los test')
     })
  /*   beforeEach(()=>
@@ -18,30 +18,28 @@ describe('Travels application', () => {
         console.log('despues de todos los test')
     })
 */
-
-    it('click on travel tab', () => {
-       
-        browser.setTimeout({ 'pageLoad': 40000 })
+      it('look for a travel', () => {
         HomePage.clicOnTravelTab();
-      
-      });
-
-      it('insert origin', () => {
-    
-        HomePage.cleanOrigin();
-        browser.pause(5000);
         HomePage.insertOrigin('TXL');
-        browser.pause(30000);
+        browser.pause(1000);
+        HomePage.insertDestination('LONDRES');
+        HomePage.selectPassengers();
+        browser.pause(1000);
+        HomePage.selectTraveldate();
+        browser.pause(1000);
+
+        expect(browser).toHaveUrlContaining('aeropuerto-de-berlin-tegel-berlin-alemania/londres-reino-unido/2020-09-10/2020-09-20');
 
       });
-    /* it('insert destination', () => {
-    
-        browser.pause(10000);
-        HomePage.insertDestination();
-        browser.pause(30000);
+
+      it('RESULTS', () => {
+        
+
+       console.log('CANTIDAD'+ HomePage.getTravelAmount().lenght);
 
       });
-*/
+
+
    
     });   
 
