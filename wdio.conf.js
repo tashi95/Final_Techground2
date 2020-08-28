@@ -17,11 +17,14 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        //'./test/specs/**/*.js'
+     //   './test/specs/home.e2e.js'
+       './test/specs/Result.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
+      
     ],
     //
     // ============
@@ -167,6 +170,7 @@ exports.config = {
      * to manipulate configurations depending on the capability or spec.
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
+     * 
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     // beforeSession: function (config, capabilities, specs) {

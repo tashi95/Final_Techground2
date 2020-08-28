@@ -9,38 +9,56 @@ describe('Travels application', () => {
        browser.url('https://www.kiwi.com/es/')
         console.log('antes de todos los test')
     })
- /*   beforeEach(()=>
-    {
-        console.log('antes de cada test')
-    })
-    after(()=>{
-
-        console.log('despues de todos los test')
-    })
-*/
-      it('look for a travel', () => {
+ 
+     it('Clic on travel tab', () => {
         HomePage.clicOnTravelTab();
+      
+      });
+  
+     it('insert origin country', () => {
         HomePage.insertOrigin('TXL');
-        browser.pause(1000);
+        browser.pause(30000);
+
+      });
+
+      it('insert destination country', () => {
+      
         HomePage.insertDestination('LONDRES');
+        browser.pause(30000);
+
+      });
+
+    it('select passengers', () => {
+      
         HomePage.selectPassengers();
-        browser.pause(1000);
+        browser.pause(30000);
+
+      });
+
+       it('select dates', () => {
+    
         HomePage.selectTraveldate();
-        browser.pause(1000);
-
-        expect(browser).toHaveUrlContaining('aeropuerto-de-berlin-tegel-berlin-alemania/londres-reino-unido/2020-09-10/2020-09-20');
+        browser.pause(30000);
 
       });
-
-      it('RESULTS', () => {
+     
+    it('look for a travel', () => {
+    
+        HomePage.searchTravel();
+  
         
-
-       console.log('CANTIDAD'+ HomePage.getTravelAmount().lenght);
+        expect(HomePage.getTravelListSize()).toBeDisplayed();
+        browser.setTimeout({'implicit':10000});
+      
+        expect(HomePage.getTravelListSize()).toBeElementsArrayOfSize({gte:1});
+        expect(browser).toHaveUrlContaining('2020-09-10/2020-09-20');
 
       });
+ 
 
 
    
     });   
+
 
 
