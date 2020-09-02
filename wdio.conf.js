@@ -19,7 +19,8 @@ exports.config = {
     specs: [
         //'./test/specs/**/*.js'
      //   './test/specs/home.e2e.js'
-       './test/specs/Result.e2e.js'
+      // './test/specs/Result.e2e.js'
+       './test/specs/travel.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -217,12 +218,12 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+   /* afterTest: function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             browser.takeScreenshot();
         }
     },
-
+*/
 
     /**
      * Hook that gets executed after the suite has ended

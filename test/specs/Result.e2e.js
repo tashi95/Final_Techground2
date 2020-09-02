@@ -5,9 +5,9 @@ describe('Travels application', () => {
 
     before(()=>
     {
-      
-       browser.url('https://www.kiwi.com/es/buscar/results/aeropuerto-de-berlin-tegel-berlin-alemania/londres-reino-unido/2020-09-10/2020-09-20')
-       
+     
+       browser.url('https://www.kiwi.com/es/buscar/results/aeropuerto-de-berlin-tegel-berlin-alemania/londres-reino-unido/2020-09-10/2020-09-20?adults=2&children=1&infants=0');
+       browser.maximazeWindow();
 
     })
      it('go to results page', () => {
