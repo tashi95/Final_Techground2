@@ -12,7 +12,8 @@ class Travel{
  
    
     get Birthday(){return $('//input[@name="birthDay"]')}
-    get Birthmonth() {  return $('[name=birthMonth]').$('//option[@value="11"]')}
+    //get Birthmonth() {  return $('[name=birthMonth]').$('//option[@value="11"]')}
+    get Birthmonth() {  return $('//select[@name="birthMonth"]')}
     get Birthyear() {return $('//input[@name="birthYear"]')}
     get id(){return $('input[name=idNumber]')}
 
@@ -24,7 +25,8 @@ class Travel{
     get ContinueButton(){return $('[data-test=StepControls-passengers-next]')}
     get FareTypeButton(){return $('[data-test=fareTypesStandardButton]')}
     get PackageButton(){return $('[data-test=servicePackagesPremiumButton]')}
-    get AdditionalserviceButton(){return $('[data-test=StepControls-AdditionalService-next]')}
+   
+   
 
    getFirstBookingButton(){return this.FirstBookingButton; }
    getEmailInput(){return this.EmailInput;}
@@ -45,7 +47,8 @@ class Travel{
    getContinueButton(){return this.ContinueButton;}
    getFaretypeButton(){return this.FareTypeButton;}
    getPackageButton(){return this.PackageButton;}
-   getAdditionalServicebutton(){return this.AdditionalserviceButton;}
+  
+   getoption(){return this.option;}
    //metodos
    clicOnBookingbutton()
    {
@@ -59,6 +62,8 @@ class Travel{
    {
      this.PhoneInput.click();
      this.PhoneInput.setValue(phone);
+  
+     
    }
    InsertName(name)
    {
@@ -72,11 +77,13 @@ class Travel{
    }
    selectNationality(nationality)
    {
-      
-      this.NationalityDropdown.selectByAttribute('value', nationality);
+    this.NationalityDropdown.click();
+    this.NationalityDropdown.selectByAttribute('value', nationality);
+
    }
    selectGender(gender)
    {
+    
     this.GenderDropdown.selectByAttribute('value',gender);
 
    }
@@ -87,9 +94,10 @@ class Travel{
      this.Birthday.setValue(day);
 
    }
-   selectBirthmonth()
+   selectBirthmonth(month)
    {
-    this.Birthmonth.click();
+   
+    this.Birthmonth.selectByAttribute('value', month);
    
    }
    insertBirthyear(year)
@@ -124,6 +132,7 @@ class Travel{
    clicOnAssuranceRdio()
    {
      this.AssuranceRadio.click();
+     
    }
    clicOncontinueButton()
    {
@@ -137,10 +146,8 @@ class Travel{
    {
      this.PackageButton.click();
    }
-   clicOnadditionalServicebutton()
-   {
-     this.AdditionalserviceButton();
-   }
+  
+   
 
 }   
     
