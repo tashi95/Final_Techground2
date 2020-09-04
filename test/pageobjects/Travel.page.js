@@ -3,7 +3,7 @@ class Travel{
 
    
     get FirstBookingButton(){return $('[data-test=ResultList]').$$('[data-test=ResultCardWrapper]')[1].$('div[data-test=BookingButton]')}
-    get EmailInput(){return $('[data-Test=ContactEmail]')}
+    get EmailInput(){return $('[data-Test="ContactEmail"]')}
     get PhoneInput(){return $('[data-Test=ContactPhone]')}
     get NameInput(){return $('[data-Test=ReservationPassenger-FirstName]')}
     get LastnameInput(){return $('[data-Test=ReservationPassenger-LastName]')}
@@ -12,7 +12,6 @@ class Travel{
  
    
     get Birthday(){return $('//input[@name="birthDay"]')}
-    //get Birthmonth() {  return $('[name=birthMonth]').$('//option[@value="11"]')}
     get Birthmonth() {  return $('//select[@name="birthMonth"]')}
     get Birthyear() {return $('//input[@name="birthYear"]')}
     get id(){return $('input[name=idNumber]')}
@@ -55,22 +54,22 @@ class Travel{
         this.FirstBookingButton.click();
    }
     InsertEmail(email)
-   { this.EmailInput.click();
+   { 
+     this.EmailInput.click();
      this.EmailInput.setValue(email);
+     
    }
    InsertPhone(phone)
    {
      this.PhoneInput.click();
      this.PhoneInput.setValue(phone);
-  
-     
    }
    InsertName(name)
    {
      this.NameInput.click();
      this.NameInput.setValue(name);
    }
-   InsertLastname(lastname)
+  InsertLastname(lastname)
    {
      this.LastnameInput.click();
      this.LastnameInput.setValue(lastname);
@@ -79,7 +78,6 @@ class Travel{
    {
     this.NationalityDropdown.click();
     this.NationalityDropdown.selectByAttribute('value', nationality);
-
    }
    selectGender(gender)
    {
@@ -146,8 +144,6 @@ class Travel{
    {
      this.PackageButton.click();
    }
-  
-   
 
 }   
     

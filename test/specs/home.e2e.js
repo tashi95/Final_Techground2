@@ -7,6 +7,7 @@ describe('Travels application', () => {
     before(()=>
     {
        browser.url('https://www.kiwi.com/es/')
+       browser.maximizeWindow();
         console.log('antes de todos los test')
     })
  

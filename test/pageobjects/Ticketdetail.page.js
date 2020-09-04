@@ -24,6 +24,4 @@ class Ticketdetail{
     }
    
    
-   
-   
    }module.exports = new Ticketdetail();

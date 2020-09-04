@@ -6,12 +6,11 @@ describe('Travels application', () => {
 
     before(()=>
     {
-      
        browser.url('https://www.kiwi.com/es/buscar/results/aeropuerto-de-berlin-tegel-berlin-alemania/londres-reino-unido/2020-09-10/2020-09-20')
-       
+       browser.maximizeWindow();
 
     })
-    /it('go to results page', () => {
+    it('go to results page', () => {
      
       browser.setTimeout({ 'pageLoad': 40000 });
       expect(browser).toHaveUrlContaining('results');
@@ -27,70 +26,70 @@ describe('Travels application', () => {
     });   
     it('insert email', () => {
       TravelPage.InsertEmail('joseth.castro@ucreativa.com');
-      browser.pause(10000);
+      browser.pause(30000);
+      //browser.setTimeout({'implicit':20000});
     });  
+    
     it('insert phone', () => {
       TravelPage.InsertPhone(85745123);
-      browser.pause(10000);
+      browser.setTimeout({'implicit':20000});
     });  
     it('insert name', () => {
       TravelPage.InsertName('Joseth');
-      browser.pause(10000);
+      browser.setTimeout({'implicit':20000});
     });  
     it('insert lastname', () => {
-  
       TravelPage.InsertLastname('Castro');
-      browser.pause(10000);
+      browser.setTimeout({'implicit':20000});
     });  
     it('select nationality', () => {
-  
       TravelPage.selectNationality('cr');
-      browser.pause(10000);    
+      browser.setTimeout({'implicit':20000});
     }); 
     it('select gender', () => {
    
       TravelPage.selectGender('ms');
-      browser.pause(10000);
+      browser.setTimeout({'implicit':20000});
     });  
   it('insert birthday', () => {
     
     TravelPage.insertBirthday('28');
-    browser.pause(30000);
-});  
+    browser.setTimeout({'implicit':20000});
+  });  
 it('select birthmonth', () => {
     
   TravelPage.selectBirthmonth('11'); 
-  browser.pause(10000);
+  browser.setTimeout({'implicit':20000});
 }); 
   it('insert birthyear', () => {
    
     TravelPage.insertBirthyear('1995');
-    
+    browser.setTimeout({'implicit':20000});
   }); 
 
   it('insert passport or id number', () => {
    
     TravelPage.insertIdnumber('504080074');
-    browser.pause(10000);
+    browser.setTimeout({'implicit':20000});
   });  
 
 it('clic on no expiration checkbox', () => {
   TravelPage.clicOnNoIdexpiration();
   expect(TravelPage.getExpirationday()).toBeDisabled();
-  browser.pause(10000);
+  browser.setTimeout({'implicit':20000});
 }); 
 
 it('clic on no assurance radio', () => {
  
   TravelPage.clicOnAssuranceRdio();
-  browser.pause(10000);
+  browser.setTimeout({'implicit':20000});
 
 }); 
-
 
 it('clic on continue button', () => {
   browser.pause(10000);
   TravelPage.clicOncontinueButton();
+  browser.setTimeout({'implicit':20000});
   expect(TravelPage.getFaretypeButton()).toBeDisplayed();
 }); 
 it('clic on standar button', () => {
@@ -101,11 +100,13 @@ it('clic on standar button', () => {
 it('clic on package button', () => {
   browser.pause(10000);
   TravelPage.clicOnpackageButton();
+  browser.setTimeout({'implicit':20000});
   expect(TicketPage.getContinuebutton()).toBeDisplayed();
 }); 
 it('go to pay', () => {
   browser.pause(10000);
   TicketPage.selectseating();
+  browser.setTimeout({'implicit':20000});
   expect(TicketPage.getseating()).toBeDisplayed();
   TicketPage.cliconcontinuebutton();
 
